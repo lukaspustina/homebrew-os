@@ -10,14 +10,16 @@ class Rat < Formula
   def install
     system "cargo", "build", "--release"
 
-    bin.install "target/release/rat"
+    completion_dir = "#{buildpath}/target/release"
+    system "sh", "-c", "./target/release/rat --completions bash > #{completion_dir}/rat.bash-completion"
+    system "sh", "-c", "./target/release/rat --completions fish > #{completion_dir}/rat.fish"
+    system "sh", "-c", "./target/release/rat --completions zsh  > #{completion_dir}/_rat"
 
-    # Completion scripts are generated in the crate's build directory, which
-    # includes a fingerprint hash. Try to locate it first
-    # out_dir = Dir["target/release/build/ripgrep-*/out"].first
-    # bash_completion.install "#{out_dir}/rg.bash-completion"
-    # fish_completion.install "#{out_dir}/rg.fish"
-    # zsh_completion.install "#{out_dir}/_rg"
+    bash_completion.install "#{completion_dir}/rat.bash-completion"
+    fish_completion.install "#{completion_dir}/rat.fish"
+    zsh_completion.install "#{completion_dir}/_rat"
+
+    bin.install "target/release/rat"
   end
 
   test do
