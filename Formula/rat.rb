@@ -1,8 +1,8 @@
 class Rat < Formula
   desc "REST API tool - qeuery various REST APIs comfortabl"
   homepage "https://lukaspustina.github.io/rat/"
-  url "https://github.com/lukaspustina/rat/archive/v0.0.5.tar.gz"
-  sha256 "9d3df48d2d62d44ad5f3dbd5f7f9a7fee6f725c3b9a108b44dc4431f5ebebb8e"
+  url "https://github.com/lukaspustina/rat/archive/v0.0.6.tar.gz"
+  sha256 "869a397933c370369af7b0d56f0ad6da19bd5f416c88501c376a613407952771"
   head "https://github.com/lukaspustina/rat.git"
 
   depends_on "rust" => :build
