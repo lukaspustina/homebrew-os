@@ -1,4 +1,4 @@
-class luftpost < Formula
+class Luftpost < Formula
   desc "Watches luftdaten.info particulates sensors and sends E-Mails if measurements exceed thresholds"
   homepage "https://lukaspustina.github.io/luftpost/"
   url "https://github.com/lukaspustina/luftpost/archive/v0.0.2.tar.gz"
