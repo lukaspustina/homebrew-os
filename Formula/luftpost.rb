@@ -11,9 +11,9 @@ class Luftpost < Formula
     system "cargo", "build", "--release"
 
     completion_dir = "#{buildpath}/target/release"
-    system "sh", "-c", "./target/release/luftpost --completions bash > #{completion_dir}/luftpost.bash-completion"
-    system "sh", "-c", "./target/release/luftpost --completions fish > #{completion_dir}/luftpost.fish"
-    system "sh", "-c", "./target/release/luftpost --completions zsh  > #{completion_dir}/_luftpost"
+    system "sh", "-c", "./target/release/luftpost -c /dev/null --completions bash > #{completion_dir}/luftpost.bash-completion"
+    system "sh", "-c", "./target/release/luftpost -c /dev/null --completions fish > #{completion_dir}/luftpost.fish"
+    system "sh", "-c", "./target/release/luftpost -c /dev/null --completions zsh  > #{completion_dir}/_luftpost"
 
     bash_completion.install "#{completion_dir}/luftpost.bash-completion"
     fish_completion.install "#{completion_dir}/luftpost.fish"
