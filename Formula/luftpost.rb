@@ -1,8 +1,8 @@
 class Luftpost < Formula
   desc "Watches luftdaten.info particulates sensors and sends E-Mails if measurements exceed thresholds"
   homepage "https://lukaspustina.github.io/luftpost/"
-  url "https://github.com/lukaspustina/luftpost/archive/v0.0.4.tar.gz"
-  sha256 "aee5a4878f17f6b6ff04401a9a007b2c142837e9de3dd0eab3126a2c0c4837e1"
+  url "https://github.com/lukaspustina/luftpost/archive/v1.0.0.tar.gz"
+  sha256 "efa3247f47faa4a8429bebc9b7b9051c3b1711f4b12aa458b4ce1e5fa00dcad0"
   head "https://github.com/lukaspustina/luftpost.git"
 
   depends_on "rust" => :build
