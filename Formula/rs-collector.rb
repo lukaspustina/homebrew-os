@@ -1,8 +1,8 @@
 class RsCollector < Formula
   desc "An scollector compatible telemetry collector for Galera, JVM, Mongo, Postfix etc."
   homepage "https://github.com/lukaspustina/rs-collector"
-  url "https://github.com/lukaspustina/rs-collector/archive/v0.0.9.tar.gz"
-  sha256 "98abb3c57d6b2d043e1606e47ce02e678b8b9a2b2bfe81be01d3bdd640ed344f"
+  url "https://github.com/lukaspustina/rs-collector/archive/v0.1.1.tar.gz"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   head "https://github.com/lukaspustina/rs-collector.git"
 
   depends_on "rust" => :build
