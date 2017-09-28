@@ -8,7 +8,7 @@ class Mhost < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", "--release", "--features bin"
+    system "cargo", "build", "--release", "--features", "bin"
 
     completion_dir = "#{buildpath}/target/release"
     system "sh", "-c", "./target/release/mhost -c /dev/null --completions bash > #{completion_dir}/mhost.bash-completion"
