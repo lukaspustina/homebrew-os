@@ -11,9 +11,9 @@ class Mhost < Formula
     system "cargo", "build", "--release", "--features", "bin"
 
     completion_dir = "#{buildpath}/target/release"
-    system "sh", "-c", "./target/release/mhost -c /dev/null --completions bash > #{completion_dir}/mhost.bash-completion"
-    system "sh", "-c", "./target/release/mhost -c /dev/null --completions fish > #{completion_dir}/mhost.fish"
-    system "sh", "-c", "./target/release/mhost -c /dev/null --completions zsh  > #{completion_dir}/_mhost"
+    system "sh", "-c", "./target/release/mhost --completions bash > #{completion_dir}/mhost.bash-completion"
+    system "sh", "-c", "./target/release/mhost --completions fish > #{completion_dir}/mhost.fish"
+    system "sh", "-c", "./target/release/mhost --completions zsh  > #{completion_dir}/_mhost"
 
     bash_completion.install "#{completion_dir}/mhost.bash-completion"
     fish_completion.install "#{completion_dir}/mhost.fish"
