@@ -1,8 +1,9 @@
 class Mhost < Formula
+  version "0.0.6"
   desc "Like `host`, but uses multiple DNS servers massively parallel and compares results"
   homepage "https://github.com/lukaspustina/mhost"
-  url "https://github.com/lukaspustina/mhost/archive/v0.0.5.tar.gz"
-  sha256 "af9bf2e2d944023cca6f4929c21c6bd2acac0a48ddb1e612a9b007fcc8f1f0e4"
+  url "https://github.com/lukaspustina/mhost/archive/v#{version}.tar.gz"
+  sha256 "78e25ab99fb881a6d6b39a8e27d3017fd3476842a550e9cb82babb9b9f889c2e"
   head "https://github.com/lukaspustina/mhost.git"
 
   depends_on "rust" => :build
@@ -20,9 +21,10 @@ class Mhost < Formula
     zsh_completion.install "#{completion_dir}/_mhost"
 
     bin.install "target/release/mhost"
+    man1.install "docs/man1/mhost.1"
   end
 
   test do
-    system "#{bin}/mhost", "help"
+    system "#{bin}/mhost", "--help"
   end
 end
