@@ -1,8 +1,7 @@
 class Mhost < Formula
-  version "0.0.6"
   desc "Like `host`, but uses multiple DNS servers massively parallel and compares results"
   homepage "https://github.com/lukaspustina/mhost"
-  url "https://github.com/lukaspustina/mhost/archive/v#{version}.tar.gz"
+  url "https://github.com/lukaspustina/mhost/archive/0.0.6.tar.gz"
   sha256 "78e25ab99fb881a6d6b39a8e27d3017fd3476842a550e9cb82babb9b9f889c2e"
   head "https://github.com/lukaspustina/mhost.git"
 
