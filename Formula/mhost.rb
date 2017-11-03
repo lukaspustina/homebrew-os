@@ -1,9 +1,8 @@
 class Mhost < Formula
-  version "0.0.6"
   desc "Like `host`, but uses multiple DNS servers massively parallel and compares results"
   homepage "https://github.com/lukaspustina/mhost"
-  url "https://github.com/lukaspustina/mhost/archive/v#{version}.tar.gz"
-  sha256 "78e25ab99fb881a6d6b39a8e27d3017fd3476842a550e9cb82babb9b9f889c2e"
+  url "https://github.com/lukaspustina/mhost/archive/v0.0.7.tar.gz"
+  sha256 "b494cb69dc0b60140a9d50b120b5e388003c046b0f1537234941bc4e6562e100"
   head "https://github.com/lukaspustina/mhost.git"
 
   depends_on "rust" => :build
