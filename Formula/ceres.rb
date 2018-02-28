@@ -9,16 +9,16 @@ class Ceres < Formula
     system "cargo", "build", "--release"
 
     completion_dir = "#{buildpath}/target/release"
-    system "sh", "-c", "./target/release/ceres --completions bash > #{completion_dir}/ceres.bash-completion"
-    system "sh", "-c", "./target/release/ceres --completions fish > #{completion_dir}/ceres.fish"
-    system "sh", "-c", "./target/release/ceres --completions zsh  > #{completion_dir}/_ceres"
+    system "sh", "-c", "./target/release/ceres completions --shell bash > #{completion_dir}/ceres.bash-completion"
+    system "sh", "-c", "./target/release/ceres completions --shell fish > #{completion_dir}/ceres.fish"
+    system "sh", "-c", "./target/release/ceres completions --shell zsh  > #{completion_dir}/_ceres"
 
     bash_completion.install "#{completion_dir}/ceres.bash-completion"
     fish_completion.install "#{completion_dir}/ceres.fish"
     zsh_completion.install "#{completion_dir}/_ceres"
 
     bin.install "target/release/ceres"
-    # man1.install "docs/man1/ceres.1"
+    man1.install "docs/man1/ceres.1"
   end
 
   test do
