@@ -19,6 +19,7 @@ class Ceres < Formula
 
     bin.install "target/release/ceres"
     man1.install "docs/man1/ceres.1"
+    man5.install "docs/man1/ceres.conf.5"
   end
 
   test do
