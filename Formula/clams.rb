@@ -1,7 +1,7 @@
-class Clam < Formula
-  desc "Clam"
-  homepage "https://github.com/lukaspustina/clam"
-  head "https://github.com/lukaspustina/clam.git"
+class Clams < Formula
+  desc "Clam Binaries"
+  homepage "https://github.com/lukaspustina/clams-bin"
+  head "https://github.com/lukaspustina/clams-bin.git"
 
   depends_on "rust" => :build
 
