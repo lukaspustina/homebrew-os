@@ -1,11 +1,24 @@
 class Ceres < Formula
   desc "CenterDevice SRE (ceres)"
   homepage "https://github.com/lukaspustina/ceres"
+  url "https://github.com/lukaspustina/ceres/archive/v0.0.9.tar.gz"
+  sha256 "e7ce4c38f8d4b201db6ac8f4c148f562ea425db6d8f4750c3768731100b177e4"
   head "https://github.com/lukaspustina/ceres.git"
 
-  depends_on "rust" => :build
-
   def install
+    # "#{ENV.fetch("CURL_HOME", ".")}/.cargo" is a little trick to get the users home dir instead of brew temp home dir
+    cargo_home = Pathname.new(ENV["CARGO_HOME"] || "#{ENV.fetch("CURL_HOME", ".")}/.cargo")
+    unless cargo_home.exist?
+      odie "Could not find 'cargo' installation neither in CARGO_HOME='#{ENV["CARGO_HOME"]}' nor in HOME='#{ENV.fetch("CURL_HOME", ".")}/.cargo'. Please install using 'rustup' via https://rustup.rs."
+    end
+    cargo_path = (cargo_home/"bin").to_s
+    ENV.prepend_path "PATH", cargo_path
+
+    unless which("rustup", cargo_path)
+      odie "Installation method requires 'rustup'. Please install using 'rustup' via https://rustup.rs."
+    end
+
+    system "rustup", "override", "set", "stable"
     system "cargo", "build", "--release"
 
     completion_dir = "#{buildpath}/target/release"
