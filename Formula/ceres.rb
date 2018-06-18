@@ -1,8 +1,8 @@
 class Ceres < Formula
   desc "CenterDevice SRE (ceres)"
   homepage "https://github.com/lukaspustina/ceres"
-  url "https://github.com/lukaspustina/ceres/archive/v0.0.15.tar.gz"
-  sha256 "3b257d341cecaf4c8c9ba48d75b7ca51d8897c1ba6bc7aada06b1b4bd8fd7623"
+  url "https://github.com/lukaspustina/ceres/archive/v0.0.16.tar.gz"
+  sha256 "b03ca5301ab6773334cfea5f9ab424d94001a0fa3df4f0370f050fed6d60f093"
   head "https://github.com/lukaspustina/ceres.git"
 
   def install
