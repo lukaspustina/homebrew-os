@@ -31,6 +31,7 @@ class Ceres < Formula
     zsh_completion.install "#{completion_dir}/_ceres"
 
     bin.install "target/release/ceres"
+    bin.install "contrib/cssh"
     man1.install "docs/man1/ceres.1"
     man5.install "docs/man5/ceres.conf.5"
   end
