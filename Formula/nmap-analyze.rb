@@ -7,7 +7,7 @@ class NmapAnalyze < Formula
 
   def install
     # "#{ENV.fetch("CURL_HOME", ".")}/.cargo" is a little trick to get the users home dir instead of brew temp home dir
-    cargo_home = Pathname.new(ENV["CARGO_HOME"] || "#{ENV.fetch("CURL_HOME", ".")}/.cargo")
+    cargo_home = Pathname.new("#{ENV.fetch("CURL_HOME", ".")}/.cargo" || ENV["CARGO_HOME"])
     unless cargo_home.exist?
       odie "Could not find 'cargo' installation neither in CARGO_HOME='#{ENV["CARGO_HOME"]}' nor in HOME='#{ENV.fetch("CURL_HOME", ".")}/.cargo'. Please install using 'rustup' via https://rustup.rs."
     end
