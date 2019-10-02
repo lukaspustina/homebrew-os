@@ -5,7 +5,7 @@ script:
   - cd ${TRAVIS_BUILD_DIR}
   - pwd
   - ls Formula/*.rb
-  - for formula in Formula/*.rb; do brew install $i; done
+  - for formula in Formula/*.rb; do brew install ${formula}; done
 
 notifications:
   email:
