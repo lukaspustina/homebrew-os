@@ -8,7 +8,7 @@ script:
   - cd ${TRAVIS_BUILD_DIR}
   - pwd
   - ls Formula/*.rb
-  - for formula in Formula/*.rb; do brew install ${formula}; done
+  - for formula in Formula/*.rb; do brew install ${formula} || (echo "Build failed."; exit 1); done
 
 notifications:
   email:
