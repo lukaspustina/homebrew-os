@@ -1,3 +1,6 @@
+os: osx
+osx_image: xcode11
+
 before_install:
   - export TRAVIS_COMMIT="$(git rev-parse --verify -q HEAD)"
   - if [ -f ".git/shallow" ]; then
