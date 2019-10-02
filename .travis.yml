@@ -18,7 +18,7 @@ before_install:
   - ulimit -n 1024
 
 script:
-  - brew test-bot
+  - for formula in Formula/*.rb; do brew install $i; done
 
 notifications:
   email:
