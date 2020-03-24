@@ -1,8 +1,8 @@
 class NmapAnalyze < Formula
   desc "Analyzes nmap xml output and compares results with expected specification"
   homepage "https://github.com/lukaspustina/nmap-analyze"
-  url "https://github.com/lukaspustina/nmap-analyze/archive/v0.3.0.tar.gz"
-  sha256 "178f605b87df7c1f8a37c44470c37a82a8be83bdbaa5c6528235544c75b395f4"
+  url "https://github.com/lukaspustina/nmap-analyze/archive/v1.1.0.tar.gz"
+  sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   head "https://github.com/lukaspustina/nmap-analyze.git"
 
   def install
