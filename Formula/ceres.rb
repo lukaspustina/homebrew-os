@@ -1,8 +1,8 @@
 class Ceres < Formula
   desc "CenterDevice SRE (ceres)"
   homepage "https://github.com/lukaspustina/ceres"
-  url "https://github.com/lukaspustina/ceres/archive/v0.0.35.tar.gz"
-  sha256 "bfe85805b5ec627ff9a330c5fabfdbe824fa66f4ddc664aa516fd88a2d4673e5"
+  url "https://github.com/lukaspustina/ceres/archive/v0.0.36.tar.gz"
+  sha256 "a65805c997934a347a2c60e4113fd440b73e29f5aac1c308e39d48527294504f"
   head "https://github.com/lukaspustina/ceres.git"
 
   def install
@@ -32,6 +32,7 @@ class Ceres < Formula
 
     bin.install "target/release/ceres"
     bin.install "contrib/cssh"
+    bin.install "contrib/cil"
     man1.install "docs/man1/ceres.1"
     man5.install "docs/man5/ceres.conf.5"
   end
